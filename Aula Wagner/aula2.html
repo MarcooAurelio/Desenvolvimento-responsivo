@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página com Imagens Responsivas</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+  }
+  .subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .image-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+  }
+  .half-width {
+    width: calc(50% - 5px); /* Considerando a margem entre as imagens */
+    margin-right: 10px; /* Adicionando margem entre as imagens menores */
+  }
+  .full-width {
+    width: 100%; /* Largura total */
+  }
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+    .half-width {
+      width: 100%; /* Definindo largura total para as imagens menores em telas pequenas */
+      margin-right: 0; /* Removendo margem */
+      margin-bottom: 10px; /* Adicionando margem inferior */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Imagens aleatórias</h1>
+  <p class="subtitle">Aqui estão algumas imagens aleatórias</p>
+  
+  <div class="image-container">
+    <img src="colorido.jpg" alt="Imagem Grande" class="responsive-image full-width">
+  </div>
+  
+  <div class="image-container">
+    <img src="verdecentral.jpg" alt="Imagem Menor 1" class="responsive-image half-width">
+    <img src="verdelateral.jpg" alt="Imagem Menor 2" class="responsive-image half-width">
+  </div>
+</div>
+
+</body>
+</html>
